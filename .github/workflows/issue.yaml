@@ -1,20 +1,9 @@
-name: Issue Workflow
-on:
-  issues
+name: Handle New Issue
+on: issues
 jobs:
   respond_to_issue:
     runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v3
-
-      - name: Respond to New Issue
-        uses: peter-evans/create-or-update-comment@v2
-        with:
-          issue-number: ${{ github.event.issue.number }}
-          body: |
-            Thank you for opening this issue! We will review it as soon as possible.
-          
+    steps:        
       - name: Print-metadata
         run: |
           echo "Issue Title: ${{ github.event.issue.title }}"
