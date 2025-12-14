@@ -1,7 +1,6 @@
 name: Issue Workflow
 on:
-  issues:
-    types: [opened, edited, reopened]
+  issues
 jobs:
   respond_to_issue:
     runs-on: ubuntu-latest
