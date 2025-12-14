@@ -6,7 +6,5 @@ jobs:
     steps:        
       - name: Print-metadata
         run: |
-          echo "Issue Title: ${{ github.event.issue.title }}"
-          echo "Issue Body: ${{ github.event.issue.body }}"
-          echo "${{ toJSON(github) }}"
-          
+         echo "${{ toJSON(github) }}"
+        
