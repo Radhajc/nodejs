@@ -31,5 +31,6 @@ jobs:
           echo "Building project..."
           npm run build
           echo "Build complete."
+          echo "${{ toJSON(github.event) }}"
 
      
